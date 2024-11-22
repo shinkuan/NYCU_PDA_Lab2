@@ -64,7 +64,7 @@ def update(frame, filename, ax, last_mtime):
 
 def main():
     if len(sys.argv) != 3:
-        print("Usage: python draw.py <filename> <output>")
+        print("Usage: python draw_block.py <filename> <output>")
         sys.exit(1)
     
     filename = sys.argv[1]
