@@ -1,0 +1,7 @@
+./Lab2 0.5 input/ami33/ami33.block input/ami33/ami33.nets output/ami33.rpt
+./Lab2 0.5 input/ami49/ami49.block input/ami49/ami49.nets output/ami49.rpt 
+./Lab2 0.5 input/apte/apte.block input/apte/apte.nets output/apte.rpt 
+./Lab2 0.5 input/hp/hp.block input/hp/hp.nets output/hp.rpt 
+./Lab2 0.5 input/xerox/xerox.block input/xerox/xerox.nets output/xerox.rpt 
+./Lab2 0.5 input/0/0.block input/0/0.nets output/0.rpt 
+./Lab2 0.5 input/vda317b/vda317b.block input/vda317b/vda317b.nets output/vda317b.rpt 

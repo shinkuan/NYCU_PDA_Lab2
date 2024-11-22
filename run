@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Description:
+# - If an argument is provided (e.g., ./run_lab2.sh another_testcase),
+#   the script will execute the Lab2 command for that specific test case.
+# - If no argument is provided, the script will iterate through the array
+#   of predefined test cases and execute the Lab2 command for each.
+
+# Define an array containing elements a, b, c
+# elements=(0 ami33 ami49 apte hp vda317b xerox)
+elements=(0 ami49 apte hp vda317b xerox)
+
+# Function: Execute the Lab2 command
+run_lab2() {
+    local testcase="$1"
+
+    # Define the input and output file paths
+    local input_block="./input/$testcase/$testcase.block"
+    local input_nets="./input/$testcase/$testcase.nets"
+    local output_rpt="./output/$testcase.rpt"
+
+    # Check if the input files exist
+    if [[ -f "$input_block" && -f "$input_nets" ]]; then
+        echo "Executing command: ./Lab2 $input_block $input_nets $output_rpt"
+        ./Lab2 "$input_block" "$input_nets" "$output_rpt"
+
+        # Check if the command was executed successfully
+        if [[ $? -eq 0 ]]; then
+            echo "Successfully processed $testcase"
+        else
+            echo "Error occurred while processing $testcase" >&2
+        fi
+    else
+        echo "Input files $input_block or $input_nets do not exist. Skipping $testcase." >&2
+    fi
+}
+
+# Main script execution
+if [[ $# -gt 1 ]]; then
+    echo "Usage: $0 [testcase]" >&2
+    echo " - testcase: Optional. Specify a single test case to execute." >&2
+    exit 1
+fi
+
+if [[ $# -eq 1 ]]; then
+    # If one argument is provided, execute the specific test case
+    testcase="$1"
+    run_lab2 "$testcase"
+else
+    # If no arguments are provided, iterate through the array and execute each test case
+    for testcase in "${elements[@]}"; do
+        run_lab2 "$testcase"
+    done
+fi
