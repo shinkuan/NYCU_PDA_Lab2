@@ -30,6 +30,7 @@ The objective of this lab is to place all blocks (hard macros) into a fixed rect
 - The **total wirelength**  of the nets (calculated using Half-Perimeter Wire Length, HPWL).
 
 The final cost function is defined as:
+
 $$
  \text{Cost} = \alpha A + (1 - \alpha) W 
 $$
