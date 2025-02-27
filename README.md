@@ -2,6 +2,8 @@
 # NYCU_PDA_Lab2 
 This repository contains the implementation of **Lab 2: Fixed Outline Floorplanning**  from the **Physical Design Automation (PDA)**  course at National Yang Ming Chiao Tung University (NYCU). This programming assignment asks you to write a fixed-outline floorplanner to handle hard macros. Given a set of rectangular macros and nets, the floorplanner places all macros within a rectangular chip without any overlaps. We assume that the lower-left corner of this chip is the origin (0, 0), and no space (channel) is needed between two different macros. The objective is to minimize the area of the chip bounding box and the total net wire length.
 
+![alt text](visualize/draw_vda317b.png)
+
 ---
 
 
